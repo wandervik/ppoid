@@ -1,6 +1,6 @@
 export function get_scores() {
   const request = new XMLHttpRequest();
-  request.open('GET', '/api/score', false);  // `false` makes the request synchronous
+  request.open('GET', 'http://api.ppoidgame.click/score', false);  // `false` makes the request synchronous
   request.send(null);
 
   if (request.status === 200) {
@@ -10,6 +10,6 @@ export function get_scores() {
 
 export function post_score(name, score) {
   const request = new XMLHttpRequest();
-  request.open('POST', `/api/score/${name}/${score}`, false);  // `false` makes the request synchronous
+  request.open('POST', `http://api.ppoidgame.click/score/${name}/${score}`, false);  // `false` makes the request synchronous
   request.send(null);
 }
